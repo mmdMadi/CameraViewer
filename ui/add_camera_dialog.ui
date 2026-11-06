@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddCameraDialog</class>
+ <widget class="QDialog" name="AddCameraDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>450</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>450</width>
+    <height>400</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Add Camera</string>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="basicGroup">
+     <property name="title">
+      <string>Basic Settings</string>
+     </property>
+     <layout class="QFormLayout" name="basicFormLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="nameLabel">
+        <property name="text">
+         <string>Name:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="nameEdit">
+        <property name="placeholderText">
+         <string>Enter camera name</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="urlLabel">
+        <property name="text">
+         <string>Stream URL:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="urlEdit">
+        <property name="placeholderText">
+         <string>rtsp://username:password@ip:port/path</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="descriptionLabel">
+        <property name="text">
+         <string>Description:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QTextEdit" name="descriptionEdit">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>60</height>
+         </size>
+        </property>
+        <property name="placeholderText">
+         <string>Optional description</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="videoGroup">
+     <property name="title">
+      <string>Video Settings</string>
+     </property>
+     <layout class="QFormLayout" name="videoFormLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="fpsLabel">
+        <property name="text">
+         <string>Frame Rate:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QSpinBox" name="fpsSpinBox">
+        <property name="suffix">
+         <string> FPS</string>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>60</number>
+        </property>
+        <property name="value">
+         <number>30</number>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="resolutionLabel">
+        <property name="text">
+         <string>Resolution:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QComboBox" name="resolutionComboBox">
+        <item>
+         <property name="text">
+          <string>Auto (Camera Default)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>1920x1080 (Full HD)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>1280x720 (HD)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>640x480 (VGA)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>320x240 (QVGA)</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="modeLabel">
+        <property name="text">
+         <string>Stream Mode:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QComboBox" name="modeComboBox">
+        <item>
+         <property name="text">
+          <string>Low Latency (Minimal delay)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Balanced (Good quality &amp; speed)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>High Quality (Best image quality)</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="connectionGroup">
+     <property name="title">
+      <string>Connection Settings</string>
+     </property>
+     <layout class="QFormLayout" name="connectionFormLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="timeoutLabel">
+        <property name="text">
+         <string>Timeout:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QSpinBox" name="timeoutSpinBox">
+        <property name="suffix">
+         <string> seconds</string>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>60</number>
+        </property>
+        <property name="value">
+         <number>10</number>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="retryLabel">
+        <property name="text">
+         <string>Retry Count:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QSpinBox" name="retrySpinBox">
+        <property name="maximum">
+         <number>10</number>
+        </property>
+        <property name="value">
+         <number>3</number>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QCheckBox" name="autoStartCheckBox">
+        <property name="text">
+         <string>Auto-start stream</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="examplesGroup">
+     <property name="title">
+      <string>Common URL Examples</string>
+     </property>
+     <layout class="QVBoxLayout" name="examplesLayout">
+      <item>
+       <widget class="QLabel" name="examplesLabel">
+        <property name="text">
+         <string>• RTSP: rtsp://username:password@192.168.1.100:554/stream1
+• HTTP: http://192.168.1.100:8080/video
+• MJPEG: http://192.168.1.100/mjpg/video.mjpg
+• USB Camera: 0 (for first USB camera)</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+        <property name="styleSheet">
+         <string>font-size: 10px; color: #666666;</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="buttonLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="testButton">
+       <property name="text">
+        <string>Test Connection</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancelButton">
+       <property name="text">
+        <string>Cancel</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="okButton">
+       <property name="text">
+        <string>OK</string>
+       </property>
+       <property name="default">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>cancelButton</sender>
+   <signal>clicked()</signal>
+   <receiver>AddCameraDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>380</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>okButton</sender>
+   <signal>clicked()</signal>
+   <receiver>AddCameraDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>394</x>
+     <y>380</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>224</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

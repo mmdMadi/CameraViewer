@@ -1,0 +1,26 @@
+[
+  {
+    "name": "test",
+    "url": "http://10.61.59.131:4747/video?640x480",
+    "description": "",
+    "timeout": 10,
+    "retry_count": 3,
+    "fps": 60,
+    "auto_start": true,
+    "resolution": "Auto (Camera Default)",
+    "mode": "High Quality (Best image quality)",
+    "id": "b9ef1556-dd29-40c0-9c1e-3c40b7f91a6e"
+  },
+  {
+    "name": "gooshi",
+    "url": "http://10.180.205.239:4747/video?640x480",
+    "description": "",
+    "timeout": 10,
+    "retry_count": 3,
+    "fps": 15,
+    "auto_start": true,
+    "resolution": "Auto (Camera Default)",
+    "mode": "Low Latency (Minimal delay)",
+    "id": "34028772-e84e-4ebf-ac44-c5f4af87843b"
+  }
+]
